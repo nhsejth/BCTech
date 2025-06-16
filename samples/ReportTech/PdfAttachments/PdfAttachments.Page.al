@@ -125,6 +125,16 @@ page 50950 PdfAttachments
                     Download(PdfFilename, 'Download file', 'c:\temp\', 'Pdf File(*.pdf)|*.pdf', outputFile);
                 end;
             }
+            action(RunPdfAttachmentsReport)
+            {
+                Caption = 'Run PdfAttachments Report';
+                RunObject = report PdfAttachments;
+            }
+            action(RunPdfAttachmentsSingleReport)
+            {
+                Caption = 'Run PdfAttachmentsSingle Report';
+                RunObject = report PdfAttachmentsSingle;
+            }
         }
     }
 

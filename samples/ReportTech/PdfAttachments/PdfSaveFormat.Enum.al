@@ -13,6 +13,7 @@ enum 50951 PdfSaveFormat
     /// </summary>
     value(0; Default)
     {
+        Caption = 'Default';
     }
 
     /// <summary>
@@ -20,6 +21,7 @@ enum 50951 PdfSaveFormat
     /// </summary>
     value(1; PdfA3B)
     {
+        Caption = 'PDF/A-3B';
     }
 
     /// <summary>
@@ -27,5 +29,6 @@ enum 50951 PdfSaveFormat
     /// </summary>
     value(2; Einvoice)
     {
+        Caption = 'E-Invoice';
     }
 }

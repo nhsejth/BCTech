@@ -182,9 +182,9 @@ codeunit 50951 ReportRenderingCompleteHandler
                 json.Add(PrimaryDocumentToken, this.PrimaryDocumentName);
 
             if json.Contains(SaveFormatToken) then
-                json.Replace(SaveFormatToken, format(this.SaveFormat, 0, 1))
+                json.Replace(SaveFormatToken, format(this.SaveFormat, 0, 2))
             else
-                json.Add(SaveFormatToken, format(this.SaveFormat, 0, 1));
+                json.Add(SaveFormatToken, format(this.SaveFormat, 0, 2));
         end;
 
         for i := 1 to this.AttachmentCount() do begin
@@ -192,7 +192,7 @@ codeunit 50951 ReportRenderingCompleteHandler
             clear(JsonElement);
             JsonElement.Add(NameToken, name);
             JsonElement.Add(DescriptionToken, Description);
-            JsonElement.Add(RelationshipToken, format(DataType, 0, 1));
+            JsonElement.Add(RelationshipToken, format(DataType, 0, 2));
             JsonElement.Add(MimeTypeToken, MimeType);
             JsonElement.Add(FileNameToken, FileName);
             jsonDataArray.Add(JsonElement);
